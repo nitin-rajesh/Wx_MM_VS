@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{33559828-45BC-4BB7-8E96-B9A1475FC990}</ProjectGuid>
+    <RootNamespace>WxMMVS</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>.;D:\wxWidgets-3.1.2\include;D:\wxWidgets-3.1.2\include\msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>D:\wxWidgets-3.1.2\lib\vc_lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AnswerMaker.cpp" />
+    <ClCompile Include="ColourComplex.cpp" />
+    <ClCompile Include="EliminationLooper.cpp" />
+    <ClCompile Include="FindNextPositionLooper.cpp" />
+    <ClCompile Include="GameRecord.cpp" />
+    <ClCompile Include="GameScreen.cpp" />
+    <ClCompile Include="GameSetup.cpp" />
+    <ClCompile Include="Highscore.cpp" />
+    <ClCompile Include="InitLooper.cpp" />
+    <ClCompile Include="launcher.cpp" />
+    <ClCompile Include="Looper.cpp" />
+    <ClCompile Include="NNestedForLoop.cpp" />
+    <ClCompile Include="PlayArea.cpp" />
+    <ClCompile Include="PlayArea1.cpp" />
+    <ClCompile Include="PlayTime.cpp" />
+    <ClCompile Include="RulesOfGames.cpp" />
+    <ClCompile Include="Solver.cpp" />
+    <ClCompile Include="Tensor.cpp" />
+    <ClCompile Include="wxMasterMindApp.cpp" />
+    <ClCompile Include="wxMasterMindMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AnswerMaker.h" />
+    <ClInclude Include="ColourComplex.h" />
+    <ClInclude Include="EliminationLooper.h" />
+    <ClInclude Include="FindNextPositionLooper.h" />
+    <ClInclude Include="GameConfig.h" />
+    <ClInclude Include="GameRecord.h" />
+    <ClInclude Include="GameScreen.h" />
+    <ClInclude Include="GameSetup.h" />
+    <ClInclude Include="Highscore.h" />
+    <ClInclude Include="include\GameConfig.h" />
+    <ClInclude Include="InitLooper.h" />
+    <ClInclude Include="Looper.h" />
+    <ClInclude Include="Looper.t.hpp" />
+    <ClInclude Include="NNestedForLoop.h" />
+    <ClInclude Include="NNestedForLoop.t.hpp" />
+    <ClInclude Include="PlayArea.h" />
+    <ClInclude Include="PlayArea1.h" />
+    <ClInclude Include="PlayTime.h" />
+    <ClInclude Include="RulesOfGames.h" />
+    <ClInclude Include="Solver.h" />
+    <ClInclude Include="Tensor.h" />
+    <ClInclude Include="Tensor.t.hpp" />
+    <ClInclude Include="wxMasterMindApp.h" />
+    <ClInclude Include="wxMasterMindMain.h" />
+    <ClInclude Include="wx_pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FindNextPositionLooper.ads" />
+    <None Include="Looper.ads" />
+    <None Include="wxMasterMind.depend" />
+    <None Include="wxMasterMind.layout" />
+    <None Include="wxsmith\GameScreen.wxs" />
+    <None Include="wxsmith\GameSetup.wxs" />
+    <None Include="wxsmith\PlayArea.wxs" />
+    <None Include="wxsmith\PlayArea1.wxs" />
+    <None Include="wxsmith\PlayTime.wxs" />
+    <None Include="wxsmith\RulesOfGames.wxs" />
+    <None Include="wxsmith\wxMasterMindframe.wxs" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

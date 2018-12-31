@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AnswerMaker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ColourComplex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EliminationLooper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FindNextPositionLooper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameRecord.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameSetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Highscore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InitLooper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="launcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Looper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NNestedForLoop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayArea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayArea1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayTime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RulesOfGames.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Solver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tensor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wxMasterMindApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wxMasterMindMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AnswerMaker.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ColourComplex.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EliminationLooper.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FindNextPositionLooper.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameConfig.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameRecord.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScreen.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSetup.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Highscore.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InitLooper.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Looper.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Looper.t.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NNestedForLoop.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NNestedForLoop.t.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayArea.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayArea1.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayTime.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RulesOfGames.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Solver.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tensor.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tensor.t.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wx_pch.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wxMasterMindApp.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wxMasterMindMain.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FindNextPositionLooper.ads">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Looper.ads">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="wxMasterMind.depend">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="wxMasterMind.layout">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="wxsmith\GameScreen.wxs" />
+    <None Include="wxsmith\GameSetup.wxs" />
+    <None Include="wxsmith\PlayArea.wxs" />
+    <None Include="wxsmith\PlayArea1.wxs" />
+    <None Include="wxsmith\PlayTime.wxs" />
+    <None Include="wxsmith\RulesOfGames.wxs" />
+    <None Include="wxsmith\wxMasterMindframe.wxs" />
+  </ItemGroup>
+</Project>
