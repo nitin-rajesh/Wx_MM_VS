@@ -21,6 +21,7 @@
 #include <wx/string.h>
 #include <wx/intl.h>
 #include <wx/font.h>
+#include <fstream>
 //*)
 
 //helper functions
@@ -90,7 +91,7 @@ wxMasterMindFrame::wxMasterMindFrame(wxWindow* parent,wxWindowID id)
     GridSizer1->Add(-1,-1,1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     GridSizer1->Add(-1,-1,1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     Button1 = new wxButton(Panel1, ID_BUTTON1, _("Start"), wxDefaultPosition, wxSize(107,48), 0, wxDefaultValidator, _T("ID_BUTTON1"));
-    Button1->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_HIGHLIGHT));
+    Button1->SetForegroundColour(wxColour(255,255,255));
     Button1->SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_HIGHLIGHT));
     wxFont Button1Font(16,wxFONTFAMILY_DEFAULT,wxFONTSTYLE_NORMAL,wxFONTWEIGHT_LIGHT,false,_T("Ubuntu"),wxFONTENCODING_DEFAULT);
     Button1->SetFont(Button1Font);
@@ -153,11 +154,14 @@ void wxMasterMindFrame::OnAbout(wxCommandEvent& event)
 
 void wxMasterMindFrame::StartNewGame(wxCommandEvent& event)
 {
+	std::ifstream* file = new ifstream("GameModeData.dat");
     if(!TheRealGame.GameInProgress){
+		file->read((char*)&GameMode, sizeof(GameMode));
         PlayTime *world = new PlayTime(NULL);
         world->Show(TRUE);
         event.Skip();
     }
+	delete file;
 }
 
 void wxMasterMindFrame::configureMenu(wxCommandEvent& event)

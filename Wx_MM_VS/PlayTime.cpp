@@ -6,6 +6,7 @@
 #include <time.h>
 #include <vector>
 #include <string>
+
 #ifndef WX_PRECOMP
 	//(*InternalHeadersPCH(PlayTime)
 	#include <wx/string.h>
@@ -44,6 +45,8 @@ END_EVENT_TABLE()
 
 PlayTime::PlayTime(wxWindow* parent,wxWindowID id)
 {
+
+	
 	//Initialize(PlayTime)
     int numberOfTries = GameMode.numberOfColumns*2 + (GameMode.numberOfColours - 8)*2;
     if(GameMode.isRepeat){
@@ -56,7 +59,7 @@ PlayTime::PlayTime(wxWindow* parent,wxWindowID id)
     TheRealGame.feedIt(GameMode);
 
     TheRealGame.generateAnswer(GameMode);
-    int scrollSize;
+    int scrollSize = 0;
     int windowSize = numberOfTries * 70;
     if(windowSize > 800){
         scrollSize = windowSize;
@@ -64,7 +67,7 @@ PlayTime::PlayTime(wxWindow* parent,wxWindowID id)
     }
 	Create(parent, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("wxID_ANY"));
 	int maxSize = 256+GameMode.numberOfColumns*20;
-	SetClientSize(wxSize(maxSize,windowSize + 128));
+	SetClientSize(wxSize(maxSize + 8,windowSize + 128));
 	BoxSizer1 = new wxBoxSizer(wxVERTICAL);
 	ScrolledWindow1 = new wxScrolledWindow(this, ID_SCROLLEDWINDOW1, wxDefaultPosition, wxSize(maxSize*4,windowSize), wxVSCROLL|wxHSCROLL, _T("ID_SCROLLEDWINDOW1"));
 	ScrolledWindow1->SetForegroundColour(wxColour(255,255,255));
@@ -145,8 +148,9 @@ PlayTime::PlayTime(wxWindow* parent,wxWindowID id)
     for(int k = 0; k < numberOfTries; k++){
         for(i = 0; i < 2; i++){
             for(j = 0; j < GameMode.numberOfColumns/2; j++){
-                ColourComplex[k][vecPos] = new wxTextCtrl(ScrolledWindow1, ID_COLOURCOMPLEX, wxEmptyString, wxPoint(maxSize-30*(j+1)-10,rowNo*30 + k*5/*+TheRealGame->turnLine()-25*/), wxSize(29,29), 0, wxDefaultValidator, _T("ID_ColourComplex"));
-                ColourComplex[k][vecPos]->Disable();
+                ColourComplex[k][vecPos] = new wxPanel(ScrolledWindow1, ID_COLOURCOMPLEX, wxPoint(maxSize-30*(j+1)-10,rowNo*30 + k*5/*+TheRealGame->turnLine()-25*/), wxSize(29,29), wxTAB_TRAVERSAL, _T("ID_ColourComplex"));
+				//new wxPanel(this, ID_PANEL1, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("ID_PANEL1"));
+				//ColourComplex[k][vecPos]->Disable();
                 ColourComplex[k][vecPos]->SetForegroundColour(wxColour(200,200,200));
                 ColourComplex[k][vecPos]->SetBackgroundColour(wxColour(100,100,100));
                 wxString stringnumber = wxString::Format(wxT("%d"), GameMode.numberOfColumns);
@@ -209,14 +213,19 @@ void PlayTime::Input(wxCommandEvent& event){
             for(int i = 0; i < GameMode.numberOfColumns; i++){
                 if(TheRealGame.red > 0){
                     ColourComplex[TheRealGame.currentTurn][i]->SetBackgroundColour(wxColour(255,0,0));
+					ColourComplex[TheRealGame.currentTurn][i]->SetBackgroundColour(wxColour(255, 0, 0));
                     TheRealGame.red--;
                 }
                 else if(TheRealGame.white > 0){
-                    ColourComplex[TheRealGame.currentTurn][i]->SetBackgroundColour(wxColour(230,230,230));
+                    ColourComplex[TheRealGame.currentTurn][i]->SetBackgroundColour(wxColour(225,225,225));
+					ColourComplex[TheRealGame.currentTurn][i]->SetBackgroundColour(wxColour(225, 225, 225));
                     TheRealGame.white--;
                 }
 
             }
+
+			wxWindow::Refresh();
+
         }
 
     }

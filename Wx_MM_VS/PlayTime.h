@@ -36,7 +36,9 @@ class PlayTime: public wxFrame
 		wxButton* Button9;
 		wxButton* AIButton;
 		wxButton* ClearButton;
-		wxTextCtrl* ColourComplex[64][8];
+		//wxTextCtrl* ColourComplex[64][8];
+		//wxButton* ColourComplex[64][8];
+		wxPanel* ColourComplex[64][8];
 		wxGauge* Gauge1;
 		wxButton* Button7;
 		wxButton* Button6;
